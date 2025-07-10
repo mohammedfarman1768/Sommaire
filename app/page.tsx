@@ -1,13 +1,23 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+// import BgGradient from '@/components/common/bg-gradient';
+// import HeroSection from '@/components/home/hero-section';
+// import DemoSection from '@/components/home/demo-section';
+// import HowitworksSection from '@/components/home/how-it-works-section';
+// import PricingSection from '@/components/home/pricing-section';
+// import CTASection from '@/components/home/cta-section';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold mb-4">Welcome to Summora!</h1>
-        <Button variant="default">Get Started</Button>
+    <>
+      <div className="relative w-full">
+        {/* <BgGradient /> */}
+        <div className="flex flex-col">
+          {/* <HeroSection /> */}
+          {/* <DemoSection /> */}
+          {/* <HowitworksSection /> */}
+          {/* <PricingSection /> */}
+          {/* <CTASection /> */}
+        </div>
       </div>
-    </main>
+    </>
   );
 }
