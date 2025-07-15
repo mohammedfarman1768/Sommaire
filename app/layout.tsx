@@ -2,7 +2,7 @@ import './globals.css';
 import { Source_Sans_3 as FontSans } from 'next/font/google';
 import Header from '@/components/common/header';
 import Footer from '@/components/common/footer';
-// import { ClerkProvider } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 // import { Toaster } from '@/components/ui/sonner';
 // import Preloader from '@/components/common/preloader';
 import type { Metadata } from 'next';
@@ -16,7 +16,7 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: 'Sommaire - AI Powered PDF Summarization',
   description:
-    'Save hours of reading time with AI powered PDF summarization. Transform lengthy PDFs into clear, accurate summaries in second with our advanced AI Technology.',
+    'Save hours of reading time with AI powered PDF summarization. Transform lengthy PDFs into clear, accurate summaries in seconds with our advanced AI Technology.',
   openGraph: {
     images: [
       {
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // <ClerkProvider>
+    <ClerkProvider>
       <html lang="en">
         <body className={`${fontSans.variable} font-sans antialiased`}>
           {/* <Preloader /> */}
@@ -48,6 +48,6 @@ export default function RootLayout({
           {/* <Toaster /> */}
         </body>
       </html>
-    // </ClerkProvider>
+    </ClerkProvider>
   );
 }
