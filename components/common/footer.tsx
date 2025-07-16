@@ -12,7 +12,7 @@ export default function Footer() {
             src="/image.png"
             width={120}
             height={120}
-            alt="Kaushik Verma Picture"
+            alt="Mohammed Farman Picture"
             className="border-opacity-30 w-16 self-center rounded-full border-2 border-solid border-gray-300 p-0.5 shadow-2xl lg:w-24"
             style={{ color: 'transparent' }}
           />
@@ -20,8 +20,8 @@ export default function Footer() {
           <div className="mr-auto text-center text-base text-gray-400 outline-none lg:text-lg">
             Made by
             <span className="px-1 underline underline-offset-4">
-              <Link target="_blank" href="https://kaushikverma.me/">
-                Kaushik Verma
+              <Link target="_blank" href="https:///">
+                Farman
               </Link>
             </span>
             🧡
@@ -93,9 +93,9 @@ export default function Footer() {
           <Link
             target="_blank"
             className="underline dark:text-gray-400"
-            href="https://kaushikverma.me/"
+            href="https:/.me/"
           >
-            Kaushik Verma
+            Mohammed Farman
           </Link>
           . All Rights Reserved.
         </span>

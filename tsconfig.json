@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],              // ✅ ensures JSX.Element is available
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // ✅ ensures JSX.Element is available
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,13 +15,17 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",                                     // ✅ updated for React 17+ JSX transform
+    "jsx": "preserve", // ✅ updated for React 17+ JSX transform
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     },
-    "types": ["react"],                                     // ✅ add this to load React types
+    "types": [
+      "react"
+    ], // ✅ add this to load React types
     "plugins": [
       {
         "name": "next"
@@ -30,5 +38,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -40,7 +40,7 @@ export const demoText = `# SOMMAIRE: AI-Powered Document Summarizer 🧠📄
 🎯 SOMMAIRE is an intelligent, web-based tool that simplifies complex documents into clear, concise summaries—powered by state-of-the-art AI.
 
 # Website Details
-• 🌐 Platform: SOMMAIRE (https://sommaire-kv.vercel.app)
+• 🌐 Platform: SOMMAIRE
 • 👥 For: Students, Professionals, Researchers, and Content Creators
 
 # Key Highlights
