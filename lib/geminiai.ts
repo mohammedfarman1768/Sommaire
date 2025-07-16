@@ -1,13 +1,13 @@
 import { GoogleGenerativeAI, type GenerateContentRequest } from '@google/generative-ai';
 import { SUMMARY_SYSTEM_PROMPT } from '@/utils/prompts';
 
-const geneAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
+// ✅ Ensure correct env variable name matches your .env file
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 
 export const generateSummaryFromGemini = async (pdfText: string): Promise<string> => {
   try {
-    const model = geneAI.getGenerativeModel({
+    const model = genAI.getGenerativeModel({
       model: 'gemini-2.0-flash',
-      // model: 'gemini-1.5-pro-002',
       generationConfig: {
         temperature: 0.7,
         maxOutputTokens: 1500,
@@ -29,15 +29,14 @@ export const generateSummaryFromGemini = async (pdfText: string): Promise<string
     };
 
     const result = await model.generateContent(prompt);
-    const response = result.response;
-    const responseText = await response.text();
+    const responseText = await result.response.text();
 
     if (!responseText) {
       throw new Error('Empty response from Gemini');
     }
 
     return responseText;
-  } catch (err: unknown) {
+  } catch (err) {
     console.error('Gemini API Error:', err);
     throw err;
   }

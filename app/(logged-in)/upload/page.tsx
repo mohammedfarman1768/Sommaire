@@ -17,7 +17,7 @@ export default async function UploadPage(): Promise<React.JSX.Element> {
     redirect('/sign-in');
   }
 
-  const hasReachedLimit = await hasReachedUploadLimit(user.id); // ✅ treat as boolean
+  const hasReachedLimit = await hasReachedUploadLimit(user.id); 
 
   if (hasReachedLimit) {
     redirect('/dashboard');

@@ -7,7 +7,7 @@ export async function getPriceId(userId: string | undefined): Promise<string | u
   if (!userId) return undefined;
 
   const sql = await getDbConnection();
-  const query = await sql`SELECT price_id FROM users WHERE user_id = ${userId}`;
+  const query = await sql`SELECT price_id FROM users WHERE id = ${userId}`;
   return query?.[0]?.price_id as string | undefined;
 }
 

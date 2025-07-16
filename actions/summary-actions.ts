@@ -3,10 +3,10 @@
 import { getDbConnection } from '@/lib/db';
 import { currentUser } from '@clerk/nextjs/server';
 import { revalidatePath } from 'next/cache';
-import { utapi } from '@/app/server/uploadthing;
+import { utapi } from '@/app/server/uploadthing';
 
 interface DeleteSummaryActionProps {
-  summaryId: number;
+  summaryId: string; // string, because it's a UUID
 }
 
 interface DeleteSummaryResult {
